@@ -1,0 +1,11 @@
+# TSCircuit Feedback While Building `clip-on-battery-meter-2`
+
+- The JLC import flow is useful for footprint generation, but imported pin labels were incomplete for `LMV339IDR` and `LM393DR2G`. Analog IC imports need more reliable pin-name extraction because bad pin metadata is easy to miss and directly affects circuit correctness.
+- `tsci search` is strong for electrical parts but weak for mechanical intent. Searches like `battery clip` and `9V battery` returned broad battery-holder or unrelated power-management parts instead of something clearly usable for a clip-on meter workflow.
+- The repo bootstrap was a bare resistor-capacitor stub. A better `tsci init` starter for analog indicator projects would help, especially examples with references, comparators, LED bars, and custom connectors.
+- The lack of immediate package semantics for imported switches is another rough edge. Physical footprint import is there, but functional pin grouping for 4-pin tactile switches still requires external verification.
+- One imported footprint (`LMV331IDBVR`) came in with a numerically tiny-but-invalid pad coordinate (`-1.1368683772161603e-13mm`) that broke PCB parsing until corrected to `0mm`. The importer should normalize near-zero geometry values.
+- Imported analog parts also lacked `pinAttributes` for power and ground, which produced avoidable build warnings. That metadata should ideally be inferred or added during import for common IC categories.
+- Fixed-position parts inside lightweight grouping constructs were harder to reason about than expected during PCB iteration. It would help if `tscircuit` made it more obvious when grouping affects final placement or source-group behavior.
+- The build checker still reported missing `requires_power` / `requires_ground` semantics for imported custom chips even after pin-attribute metadata was added in the generated component files. That looks like a gap between the documented `pinAttributes` model and what the downstream checker actually consumes.
+- Autorouting behavior was sensitive to small, seemingly safe geometry changes. One placement variant built quickly with a single DRC hotspot, while another nearby variant produced a much larger cluster of via/trace conflicts and much longer build times. Better route diagnostics or deterministic trace planning controls would make iteration faster.
