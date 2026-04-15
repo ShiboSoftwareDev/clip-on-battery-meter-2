@@ -1,0 +1,7 @@
+# Third Pass TSCircuit Feedback While Fixing `clip-on-battery-meter-2`
+
+- Open-collector comparator outputs needed explicit pull-ups before the hysteresis network made electrical sense. The first implementation effectively depended on the LED path to bias the outputs high, which is too implicit for a stable analog indicator.
+- The builtin `<diode />` path was not reliable enough for this use case. A natural package string like `SOD-123` failed, and then a full KiCad-style `Diode_SMD/D_SOD-123` footprint also failed with missing pad-dimension inference, so the practical workaround was a custom two-pad protection-diode footprint.
+- `tsci build` was useful for iterating placement, but the remaining PCB failure is still reported mostly as via IDs. I had to inspect `dist/index/circuit.json` to learn that the last unresolved physical issue is a clearance conflict between the `TH_80` and `TH_100` escape vias near the top of the threshold ladder.
+- Generic passive parts were inconsistent about supplier resolution during the pass. Some runs of `tsci check netlist` reported offline lookup failures for new resistors, while later builds produced auto-resolved supplier part numbers in the generated circuit JSON.
+- The persistent `requires_power` / `requires_ground` warnings still appear even after the circuit has explicit rail wiring and the imported wrappers carry pin attributes. At this point they look more like checker propagation noise than missing electrical intent in the source.

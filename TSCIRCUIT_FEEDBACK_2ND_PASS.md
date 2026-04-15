@@ -1,0 +1,8 @@
+# Additional TSCircuit Feedback While Fixing `clip-on-battery-meter-2`
+
+- The builtin `<diode />` footprint naming is harder to use than it should be. A natural package string like `SOD-123` was rejected with `Invalid footprint function, got "sod"`, which makes it unclear when a plain package code is valid versus when a full KiCad-style footprint path is required.
+- `tsci build` can finish with exit code `0` even when it reports real source-generation and DRC problems in the same run. That makes automation harder because "build succeeded" and "design is usable" are not clearly separated.
+- `tsci check netlist` currently reports offline supplier lookups as errors for newly added generic passives. In a restricted-network environment that makes the netlist check noisier than it should be for otherwise valid circuits.
+- Imported wrapper components can carry `pinAttributes`, but the build checker still reported missing `requires_power` / `requires_ground` semantics on the instantiated parts. That makes it hard to know whether the issue is in import generation, wrapper propagation, or the checker itself.
+- The schematic auto-packer is fairly brittle once a handful of feedback components are added around an analog IC. A small increase in component count pushed the layout into `Matchpack layout solver failed`, and the practical workaround was to start pinning schematic coordinates manually.
+- The router is very sensitive to small placement changes around dense LED rows. A change that is electrically minor can flip the board from one or two DRC items into several accidental-contact and via-clearance failures, with little guidance about which geometry change caused the cascade.
