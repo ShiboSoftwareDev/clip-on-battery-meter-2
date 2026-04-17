@@ -4,11 +4,19 @@ const pinLabels = {
   // Imported from JLC/LCSC part C2979182, MY-18650-02.
   // The manufacturer drawing identifies this part as one 18650 battery terminal,
   // not a complete two-terminal battery holder. All copper belongs to one node.
-  pin1: ["pin1"]
+  // Temporary routing workaround: expose each copper feature as a separate pin
+  // so current core does not warn about far-apart pads sharing one port hint.
+  pin1: ["pin1"], // right SMT pad
+  pin2: ["pin2"], // left SMT pad
+  pin3: ["pin3"], // left plated hole
+  pin4: ["pin4"], // right plated hole
 } as const
 
 const pinAttributes = {
   pin1: { mustBeConnected: true, includeInBoardPinout: true },
+  pin2: { mustBeConnected: true, includeInBoardPinout: true },
+  pin3: { mustBeConnected: true, includeInBoardPinout: true },
+  pin4: { mustBeConnected: true, includeInBoardPinout: true },
 } as any
 
 export const MY_18650_02 = (props: ConnectorProps) => {
@@ -24,9 +32,9 @@ export const MY_18650_02 = (props: ConnectorProps) => {
       manufacturerPartNumber="MY_18650_02"
       footprint={<footprint>
         <smtpad portHints={["pin1"]} pcbX="8.499983mm" pcbY="0mm" width="4.99999mm" height="5.499989mm" shape="rect" />
-<smtpad portHints={["pin1"]} pcbX="-8.499983mm" pcbY="0mm" width="4.99999mm" height="3.499993mm" shape="rect" />
-<platedhole portHints={["pin1"]} pcbX="-8.000111mm" pcbY="0mm" outerDiameter="1.8499836mm" holeDiameter="0.9249918mm" shape="circle" />
-<platedhole portHints={["pin1"]} pcbX="7.999857mm" pcbY="0mm" outerDiameter="1.8499836mm" holeDiameter="0.9249918mm" shape="circle" />
+<smtpad portHints={["pin2"]} pcbX="-8.499983mm" pcbY="0mm" width="4.99999mm" height="3.499993mm" shape="rect" />
+<platedhole portHints={["pin3"]} pcbX="-8.000111mm" pcbY="0mm" outerDiameter="1.8499836mm" holeDiameter="0.9249918mm" shape="circle" />
+<platedhole portHints={["pin4"]} pcbX="7.999857mm" pcbY="0mm" outerDiameter="1.8499836mm" holeDiameter="0.9249918mm" shape="circle" />
 <silkscreenpath route={[{"x":-3.429990599999769,"y":5.619978599999968},{"x":-3.429990599999769,"y":-5.782513199999926}]} />
 <silkscreenpath route={[{"x":-3.429990599999769,"y":-5.669991199999913},{"x":6.099987800000235,"y":-5.669991199999913}]} />
 <silkscreenpath route={[{"x":-3.429990599999769,"y":5.619978599999968},{"x":6.099987800000235,"y":5.619978599999968}]} />

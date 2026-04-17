@@ -16,6 +16,9 @@ export default function ClipOnBatteryMeter() {
         pcbY={0}
         pinAttributes={{
           pin1: { providesPower: true, mustBeConnected: true, includeInBoardPinout: true },
+          pin2: { providesPower: true, mustBeConnected: true, includeInBoardPinout: true },
+          pin3: { providesPower: true, mustBeConnected: true, includeInBoardPinout: true },
+          pin4: { providesPower: true, mustBeConnected: true, includeInBoardPinout: true },
         } as any}
       />
       <MY_18650_02
@@ -25,6 +28,9 @@ export default function ClipOnBatteryMeter() {
         pcbRotation={180}
         pinAttributes={{
           pin1: { requiresGround: true, mustBeConnected: true, includeInBoardPinout: true },
+          pin2: { requiresGround: true, mustBeConnected: true, includeInBoardPinout: true },
+          pin3: { requiresGround: true, mustBeConnected: true, includeInBoardPinout: true },
+          pin4: { requiresGround: true, mustBeConnected: true, includeInBoardPinout: true },
         } as any}
       />
 
@@ -135,7 +141,7 @@ export default function ClipOnBatteryMeter() {
         name="RHYS4"
         resistance="3.3M"
         footprint="0402"
-        pcbX={38}
+        pcbX={42.5}
         pcbY={-16.5}
         pcbRotation={0}
         layer="bottom"
@@ -181,7 +187,13 @@ export default function ClipOnBatteryMeter() {
       <silkscreentext text="100%" pcbX={47} pcbY={-13} fontSize="0.9mm" />
 
       <trace from="J_BAT_POS.pin1" to="net.BAT_RAW" />
+      <trace from="J_BAT_POS.pin2" to="net.BAT_RAW" />
+      <trace from="J_BAT_POS.pin3" to="net.BAT_RAW" />
+      <trace from="J_BAT_POS.pin4" to="net.BAT_RAW" />
       <trace from="J_BAT_NEG.pin1" to="net.GND" />
+      <trace from="J_BAT_NEG.pin2" to="net.GND" />
+      <trace from="J_BAT_NEG.pin3" to="net.GND" />
+      <trace from="J_BAT_NEG.pin4" to="net.GND" />
       <trace from="net.BAT_RAW" to="D_PROT.A" />
       <trace from="D_PROT.C" to="net.BAT_POS" />
 
