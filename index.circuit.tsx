@@ -111,7 +111,6 @@ export default function ClipOnBatteryMeter() {
         pcbX={1.5}
         pcbY={-16.5}
         pcbRotation={0}
-        layer="bottom"
         schX={1}
         schY={-1}
       />
@@ -122,7 +121,6 @@ export default function ClipOnBatteryMeter() {
         pcbX={16}
         pcbY={-16.5}
         pcbRotation={0}
-        layer="bottom"
         schX={3}
         schY={-1}
       />
@@ -133,7 +131,6 @@ export default function ClipOnBatteryMeter() {
         pcbX={29}
         pcbY={-16.5}
         pcbRotation={0}
-        layer="bottom"
         schX={7}
         schY={-1}
       />
@@ -144,7 +141,6 @@ export default function ClipOnBatteryMeter() {
         pcbX={42.5}
         pcbY={-16.5}
         pcbRotation={0}
-        layer="bottom"
         schX={9}
         schY={-1}
       />
@@ -155,24 +151,23 @@ export default function ClipOnBatteryMeter() {
         pcbX={47}
         pcbY={-16.5}
         pcbRotation={0}
-        layer="bottom"
         schX={-1}
         schY={6}
       />
 
-      <resistor name="RPU1" resistance="1M" footprint="0402" pcbX={1.5} pcbY={-14} pcbRotation={0} layer="bottom" />
-      <resistor name="RPU2" resistance="1M" footprint="0402" pcbX={16} pcbY={-14} pcbRotation={0} layer="bottom" />
-      <resistor name="RPU3" resistance="1M" footprint="0402" pcbX={31} pcbY={-14} pcbRotation={0} layer="bottom" />
-      <resistor name="RPU4" resistance="1M" footprint="0402" pcbX={38} pcbY={-14} pcbRotation={0} layer="bottom" />
-      <resistor name="RPU5" resistance="1M" footprint="0402" pcbX={47} pcbY={-14} pcbRotation={0} layer="bottom" />
+      <resistor name="RPU1" resistance="1M" footprint="0402" pcbX={1.5} pcbY={-14} pcbRotation={0} />
+      <resistor name="RPU2" resistance="1M" footprint="0402" pcbX={16} pcbY={-14} pcbRotation={0} />
+      <resistor name="RPU3" resistance="1M" footprint="0402" pcbX={31} pcbY={-14} pcbRotation={0} />
+      <resistor name="RPU4" resistance="1M" footprint="0402" pcbX={38} pcbY={-14} pcbRotation={0} />
+      <resistor name="RPU5" resistance="1M" footprint="0402" pcbX={47} pcbY={-14} pcbRotation={0} />
 
-      <led name="LED1" footprint="0603" color="red" pcbX={7} pcbY={-10} />
-      <resistor name="RLED1" resistance="1k" footprint="0603" pcbX={7} pcbY={-7.5} pcbRotation={90} layer="bottom" />
-      <silkscreentext text="20%" pcbX={7} pcbY={-13} fontSize="0.9mm" />
+      <led name="LED1" footprint="0603" color="red" pcbX={7} pcbY={-13.7} />
+      <resistor name="RLED1" resistance="1k" footprint="0603" pcbX={7} pcbY={-11.2} pcbRotation={90} />
+      <silkscreentext text="20%" pcbX={7} pcbY={-17.2} fontSize="0.9mm" />
 
-      <led name="LED2" footprint="0603" color="yellow" pcbX={17} pcbY={-10} />
-      <resistor name="RLED2" resistance="1k" footprint="0603" pcbX={17} pcbY={-7.5} pcbRotation={90} layer="bottom" />
-      <silkscreentext text="40%" pcbX={17} pcbY={-13} fontSize="0.9mm" />
+      <led name="LED2" footprint="0603" color="yellow" pcbX={21} pcbY={-13.7} />
+      <resistor name="RLED2" resistance="1k" footprint="0603" pcbX={21} pcbY={-11.2} pcbRotation={90} />
+      <silkscreentext text="40%" pcbX={21} pcbY={-17.2} fontSize="0.9mm" />
 
       <led name="LED3" footprint="0603" color="yellow" pcbX={29} pcbY={-10} />
       <resistor name="RLED3" resistance="1k" footprint="0603" pcbX={29} pcbY={-5.5} pcbRotation={90} />
