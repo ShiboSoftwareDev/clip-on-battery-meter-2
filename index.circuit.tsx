@@ -34,6 +34,7 @@ export default function ClipOnBatteryMeter() {
       />
 
       <BAT54WS name="D_PROT" pcbX={-28} pcbY={-13} schX={-6} schY={2} />
+      <BAT54WS name="D_SENSE_CLAMP" pcbX={9} pcbY={-15.5} pcbRotation={90} schX={0} schY={2} />
 
       <LM4040D25FTA
         name="U_REF"
@@ -201,6 +202,8 @@ export default function ClipOnBatteryMeter() {
       <trace from="R_BOT.pin2" to="net.GND" />
       <trace from="net.SENSE_DIV" to="C_SENSE.pin1" />
       <trace from="C_SENSE.pin2" to="net.GND" />
+      <trace from="net.GND" to="D_SENSE_CLAMP.A" />
+      <trace from="net.SENSE_DIV" to="D_SENSE_CLAMP.C" />
 
       <trace from="U_REF.CAT" to="RTH_TOP.pin1" />
       <trace from="RTH_TOP.pin2" to="net.TH_100" />

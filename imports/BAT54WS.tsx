@@ -9,10 +9,10 @@ const pinLabels = {
 } as const
 
 const pinAttributes = {
-  pin1: { providesPower: true, mustBeConnected: true },
-  C: { providesPower: true, mustBeConnected: true },
-  pin2: { requiresPower: true, mustBeConnected: true },
-  A: { requiresPower: true, mustBeConnected: true },
+  pin1: { mustBeConnected: true },
+  C: { mustBeConnected: true },
+  pin2: { mustBeConnected: true },
+  A: { mustBeConnected: true },
 } as any
 
 export const BAT54WS = (props: ChipProps<typeof pinLabels>) => {
