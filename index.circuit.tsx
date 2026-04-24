@@ -6,7 +6,13 @@ import { MY_18650_02 } from "./imports/MY_18650_02"
 
 export default function ClipOnBatteryMeter() {
   return (
-    <board width="108mm" height="40mm" layers={2}>
+    <board
+      width="108mm"
+      height="40mm"
+      layers={2}
+      minViaHoleDiameter={0.3}
+      minViaPadDiameter={0.45}
+    >
       <silkscreentext text="1S LI-ION METER" pcbX={-31} pcbY={16.5} fontSize="1.6mm" anchorAlignment="center" />
 
       <MY_18650_02
@@ -48,7 +54,7 @@ export default function ClipOnBatteryMeter() {
       <LMV339IDR
         name="U1"
         pcbX={39}
-        pcbY={13.5}
+        pcbY={12.5}
         pinAttributes={{
           VCC: { requiresPower: true, mustBeConnected: true },
           GND: { requiresGround: true, mustBeConnected: true },
@@ -68,8 +74,8 @@ export default function ClipOnBatteryMeter() {
       />
       <LMV331IDBVR
         name="U2"
-        pcbX={50}
-        pcbY={16.5}
+        pcbX={50.5}
+        pcbY={15.6}
         pcbRotation={180}
         pinAttributes={{
           VCC_POS: { requiresPower: true, mustBeConnected: true },
@@ -80,8 +86,8 @@ export default function ClipOnBatteryMeter() {
         } as any}
       />
 
-      <capacitor name="C1" capacitance="100nF" footprint="0603_nosilkscreen" pcbX={46} pcbY={18.5} />
-      <capacitor name="C2" capacitance="100nF" footprint="0603_nosilkscreen" pcbX={33} pcbY={18.5} />
+      <capacitor name="C1" capacitance="100nF" footprint="0603_nosilkscreen" pcbX={44.8} pcbY={18} />
+      <capacitor name="C2" capacitance="100nF" footprint="0603_nosilkscreen" pcbX={33} pcbY={17.6} />
       <capacitor
         name="C_SENSE"
         capacitance="100nF"
@@ -98,18 +104,18 @@ export default function ClipOnBatteryMeter() {
       <resistor name="R_BOT" resistance="82k" footprint="0603_nosilkscreen" pcbX={22} pcbY={-11.5} pcbRotation={90} />
 
       <resistor name="RTH_TOP" resistance="26k" footprint="0603_nosilkscreen" pcbX={26} pcbY={17} pcbRotation={90} />
-      <resistor name="RTH_100" resistance="3.6k" footprint="0603_nosilkscreen" pcbX={26} pcbY={13} pcbRotation={90} />
+      <resistor name="RTH_100" resistance="3.6k" footprint="0603_nosilkscreen" pcbX={26} pcbY={13.6} pcbRotation={90} />
       <resistor name="RTH_80" resistance="3.6k" footprint="0603_nosilkscreen" pcbX={26} pcbY={9} pcbRotation={90} />
       <resistor name="RTH_60" resistance="2.7k" footprint="0603_nosilkscreen" pcbX={26} pcbY={5} pcbRotation={90} />
       <resistor name="RTH_40" resistance="4.7k" footprint="0603_nosilkscreen" pcbX={26} pcbY={1} pcbRotation={90} />
-      <resistor name="RTH_20" resistance="59k" footprint="0603_nosilkscreen" pcbX={26} pcbY={-3} pcbRotation={90} />
+      <resistor name="RTH_20" resistance="59k" footprint="0603_nosilkscreen" pcbX={24.5} pcbY={-10.2} pcbRotation={90} />
 
       <resistor
         name="RHYS1"
         resistance="3.3M"
         footprint="0402_nosilkscreen"
         pcbX={29}
-        pcbY={4}
+        pcbY={6}
         pcbRotation={0}
         schX={1}
         schY={-1}
@@ -119,7 +125,7 @@ export default function ClipOnBatteryMeter() {
         resistance="3.3M"
         footprint="0402_nosilkscreen"
         pcbX={35}
-        pcbY={4}
+        pcbY={6}
         pcbRotation={0}
         schX={3}
         schY={-1}
@@ -129,7 +135,7 @@ export default function ClipOnBatteryMeter() {
         resistance="3.3M"
         footprint="0402_nosilkscreen"
         pcbX={41}
-        pcbY={4}
+        pcbY={6}
         pcbRotation={0}
         schX={7}
         schY={-1}
@@ -139,7 +145,7 @@ export default function ClipOnBatteryMeter() {
         resistance="3.3M"
         footprint="0402_nosilkscreen"
         pcbX={47}
-        pcbY={4}
+        pcbY={6}
         pcbRotation={0}
         schX={9}
         schY={-1}
@@ -149,17 +155,17 @@ export default function ClipOnBatteryMeter() {
         resistance="3.3M"
         footprint="0402_nosilkscreen"
         pcbX={52}
-        pcbY={4}
+        pcbY={6}
         pcbRotation={0}
         schX={-1}
         schY={6}
       />
 
-      <resistor name="RPU1" resistance="1M" footprint="0402_nosilkscreen" pcbX={29} pcbY={1.5} pcbRotation={0} />
-      <resistor name="RPU2" resistance="1M" footprint="0402_nosilkscreen" pcbX={35} pcbY={1.5} pcbRotation={0} />
-      <resistor name="RPU3" resistance="1M" footprint="0402_nosilkscreen" pcbX={41} pcbY={1.5} pcbRotation={0} />
-      <resistor name="RPU4" resistance="1M" footprint="0402_nosilkscreen" pcbX={47} pcbY={1.5} pcbRotation={0} />
-      <resistor name="RPU5" resistance="1M" footprint="0402_nosilkscreen" pcbX={52} pcbY={1.5} pcbRotation={0} />
+      <resistor name="RPU1" resistance="1M" footprint="0402_nosilkscreen" pcbX={29} pcbY={3.5} pcbRotation={0} />
+      <resistor name="RPU2" resistance="1M" footprint="0402_nosilkscreen" pcbX={35} pcbY={3.5} pcbRotation={0} />
+      <resistor name="RPU3" resistance="1M" footprint="0402_nosilkscreen" pcbX={41} pcbY={3.5} pcbRotation={0} />
+      <resistor name="RPU4" resistance="1M" footprint="0402_nosilkscreen" pcbX={47} pcbY={3.5} pcbRotation={0} />
+      <resistor name="RPU5" resistance="1M" footprint="0402_nosilkscreen" pcbX={52} pcbY={3.5} pcbRotation={0} />
 
       <led name="LED1" footprint="0603_nosilkscreen" color="red" pcbX={28} pcbY={-12.5} />
       <resistor name="RLED1" resistance="1k" footprint="0603_nosilkscreen" pcbX={28} pcbY={-10} pcbRotation={90} />
