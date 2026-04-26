@@ -114,8 +114,8 @@ export default function ClipOnBatteryMeter() {
         name="RHYS1"
         resistance="3.3M"
         footprint="0402"
-        pcbX={29}
-        pcbY={6}
+        pcbX={31}
+        pcbY={6.5}
         pcbRotation={0}
         schX={1}
         schY={-1}
