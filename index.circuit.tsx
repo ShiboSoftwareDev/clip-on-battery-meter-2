@@ -92,6 +92,7 @@ export default function ClipOnBatteryMeter() {
         name="C_SENSE"
         capacitance="100nF"
         footprint="0603"
+        supplierPartNumbers={{ jlcpcb: ["C14663"] }}
         pcbX={18}
         pcbY={-14.5}
         pcbRotation={90}
@@ -99,21 +100,94 @@ export default function ClipOnBatteryMeter() {
         schY={-2}
       />
 
-      <resistor name="RREF" resistance="3.9k" footprint="0603" pcbX={-23} pcbY={12.5} pcbRotation={90} />
-      <resistor name="R_TOP" resistance="100k" footprint="0603" pcbX={13} pcbY={-11.5} pcbRotation={90} />
-      <resistor name="R_BOT" resistance="82k" footprint="0603" pcbX={22} pcbY={-11.5} pcbRotation={90} />
+      <resistor
+        name="RREF"
+        resistance="3.9k"
+        footprint="0603"
+        supplierPartNumbers={{ jlcpcb: ["C22978"] }}
+        pcbX={-23}
+        pcbY={12.5}
+        pcbRotation={90}
+      />
+      <resistor
+        name="R_TOP"
+        resistance="100k"
+        footprint="0603"
+        supplierPartNumbers={{ jlcpcb: ["C25803"] }}
+        pcbX={13}
+        pcbY={-11.5}
+        pcbRotation={90}
+      />
+      <resistor
+        name="R_BOT"
+        resistance="82k"
+        footprint="0603"
+        supplierPartNumbers={{ jlcpcb: ["C23254"] }}
+        pcbX={22}
+        pcbY={-11.5}
+        pcbRotation={90}
+      />
 
-      <resistor name="RTH_TOP" resistance="26k" footprint="0603" pcbX={26} pcbY={17} pcbRotation={90} />
-      <resistor name="RTH_100" resistance="3.6k" footprint="0603" pcbX={26} pcbY={13.6} pcbRotation={90} />
-      <resistor name="RTH_80" resistance="3.6k" footprint="0603" pcbX={26} pcbY={9} pcbRotation={90} />
-      <resistor name="RTH_60" resistance="2.7k" footprint="0603" pcbX={26} pcbY={5} pcbRotation={90} />
-      <resistor name="RTH_40" resistance="4.7k" footprint="0603" pcbX={26} pcbY={1} pcbRotation={90} />
-      <resistor name="RTH_20" resistance="59k" footprint="0603" pcbX={24.5} pcbY={-10.2} pcbRotation={90} />
+      <resistor
+        name="RTH_TOP"
+        resistance="26k"
+        footprint="0603"
+        supplierPartNumbers={{ jlcpcb: ["C844150"] }}
+        pcbX={26}
+        pcbY={17}
+        pcbRotation={90}
+      />
+      <resistor
+        name="RTH_100"
+        resistance="3.6k"
+        footprint="0603"
+        supplierPartNumbers={{ jlcpcb: ["C22980"] }}
+        pcbX={26}
+        pcbY={13.6}
+        pcbRotation={90}
+      />
+      <resistor
+        name="RTH_80"
+        resistance="3.6k"
+        footprint="0603"
+        supplierPartNumbers={{ jlcpcb: ["C22980"] }}
+        pcbX={26}
+        pcbY={9}
+        pcbRotation={90}
+      />
+      <resistor
+        name="RTH_60"
+        resistance="2.7k"
+        footprint="0603"
+        supplierPartNumbers={{ jlcpcb: ["C13167"] }}
+        pcbX={26}
+        pcbY={5}
+        pcbRotation={90}
+      />
+      <resistor
+        name="RTH_40"
+        resistance="4.7k"
+        footprint="0603"
+        supplierPartNumbers={{ jlcpcb: ["C23162"] }}
+        pcbX={26}
+        pcbY={1}
+        pcbRotation={90}
+      />
+      <resistor
+        name="RTH_20"
+        resistance="59k"
+        footprint="0603"
+        supplierPartNumbers={{ jlcpcb: ["C23085"] }}
+        pcbX={24.5}
+        pcbY={-10.2}
+        pcbRotation={90}
+      />
 
       <resistor
         name="RHYS1"
         resistance="3.3M"
         footprint="0402"
+        supplierPartNumbers={{ jlcpcb: ["C270613"] }}
         pcbX={31}
         pcbY={6.5}
         pcbRotation={0}
@@ -124,6 +198,7 @@ export default function ClipOnBatteryMeter() {
         name="RHYS2"
         resistance="3.3M"
         footprint="0402"
+        supplierPartNumbers={{ jlcpcb: ["C270613"] }}
         pcbX={35}
         pcbY={6}
         pcbRotation={0}
@@ -134,6 +209,7 @@ export default function ClipOnBatteryMeter() {
         name="RHYS3"
         resistance="3.3M"
         footprint="0402"
+        supplierPartNumbers={{ jlcpcb: ["C270613"] }}
         pcbX={41}
         pcbY={6}
         pcbRotation={0}
@@ -144,6 +220,7 @@ export default function ClipOnBatteryMeter() {
         name="RHYS4"
         resistance="3.3M"
         footprint="0402"
+        supplierPartNumbers={{ jlcpcb: ["C270613"] }}
         pcbX={47}
         pcbY={6}
         pcbRotation={0}
@@ -154,6 +231,7 @@ export default function ClipOnBatteryMeter() {
         name="RHYS5"
         resistance="3.3M"
         footprint="0402"
+        supplierPartNumbers={{ jlcpcb: ["C270613"] }}
         pcbX={52}
         pcbY={6}
         pcbRotation={0}
@@ -161,7 +239,15 @@ export default function ClipOnBatteryMeter() {
         schY={6}
       />
 
-      <resistor name="RPU1" resistance="1M" footprint="0402" pcbX={29} pcbY={3.5} pcbRotation={0} />
+      <resistor
+        name="RPU1"
+        resistance="1M"
+        footprint="0402"
+        supplierPartNumbers={{ jlcpcb: ["C26083"] }}
+        pcbX={29}
+        pcbY={3.5}
+        pcbRotation={0}
+      />
       <resistor name="RPU2" resistance="1M" footprint="0402" pcbX={35} pcbY={3.5} pcbRotation={0} />
       <resistor name="RPU3" resistance="1M" footprint="0402" pcbX={41} pcbY={3.5} pcbRotation={0} />
       <resistor name="RPU4" resistance="1M" footprint="0402" pcbX={47} pcbY={3.5} pcbRotation={0} />
