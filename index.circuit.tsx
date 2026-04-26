@@ -248,10 +248,10 @@ export default function ClipOnBatteryMeter() {
         pcbY={3.5}
         pcbRotation={0}
       />
-      <resistor name="RPU2" resistance="1M" footprint="0402" pcbX={35} pcbY={3.5} pcbRotation={0} />
-      <resistor name="RPU3" resistance="1M" footprint="0402" pcbX={41} pcbY={3.5} pcbRotation={0} />
-      <resistor name="RPU4" resistance="1M" footprint="0402" pcbX={47} pcbY={3.5} pcbRotation={0} />
-      <resistor name="RPU5" resistance="1M" footprint="0402" pcbX={52} pcbY={3.5} pcbRotation={0} />
+      <resistor name="RPU2" resistance="1M" footprint="0402" supplierPartNumbers={{ jlcpcb: ["C138033"] }} pcbX={35} pcbY={3.5} pcbRotation={0} />
+      <resistor name="RPU3" resistance="1M" footprint="0402" supplierPartNumbers={{ jlcpcb: ["C138033"] }} pcbX={41} pcbY={3.5} pcbRotation={0} />
+      <resistor name="RPU4" resistance="1M" footprint="0402" supplierPartNumbers={{ jlcpcb: ["C138033"] }} pcbX={47} pcbY={3.5} pcbRotation={0} />
+      <resistor name="RPU5" resistance="1M" footprint="0402" supplierPartNumbers={{ jlcpcb: ["C138033"] }} pcbX={52} pcbY={3.5} pcbRotation={0} />
 
       <led name="LED1" footprint="0603" color="red" pcbX={28} pcbY={-12.5} />
       <resistor name="RLED1" resistance="1k" footprint="0603" pcbX={28} pcbY={-10} pcbRotation={90} />
