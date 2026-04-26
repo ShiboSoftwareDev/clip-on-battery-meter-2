@@ -104,7 +104,7 @@ export default function ClipOnBatteryMeter() {
         name="RREF"
         resistance="3.9k"
         footprint="0603"
-        supplierPartNumbers={{ jlcpcb: ["C22978"] }}
+        supplierPartNumbers={{ jlcpcb: ["C23018"] }}
         pcbX={-23}
         pcbY={12.5}
         pcbRotation={90}
@@ -113,7 +113,7 @@ export default function ClipOnBatteryMeter() {
         name="R_TOP"
         resistance="100k"
         footprint="0603"
-        supplierPartNumbers={{ jlcpcb: ["C25803"] }}
+        supplierPartNumbers={{ jlcpcb: ["C14675"] }}
         pcbX={13}
         pcbY={-11.5}
         pcbRotation={90}
@@ -122,7 +122,7 @@ export default function ClipOnBatteryMeter() {
         name="R_BOT"
         resistance="82k"
         footprint="0603"
-        supplierPartNumbers={{ jlcpcb: ["C23254"] }}
+        supplierPartNumbers={{ jlcpcb: ["C137678"] }}
         pcbX={22}
         pcbY={-11.5}
         pcbRotation={90}
@@ -177,7 +177,7 @@ export default function ClipOnBatteryMeter() {
         name="RTH_20"
         resistance="59k"
         footprint="0603"
-        supplierPartNumbers={{ jlcpcb: ["C23085"] }}
+        supplierPartNumbers={{ jlcpcb: ["C309564"] }}
         pcbX={24.5}
         pcbY={-10.2}
         pcbRotation={90}
@@ -243,7 +243,7 @@ export default function ClipOnBatteryMeter() {
         name="RPU1"
         resistance="1M"
         footprint="0402"
-        supplierPartNumbers={{ jlcpcb: ["C26083"] }}
+        supplierPartNumbers={{ jlcpcb: ["C138033"] }}
         pcbX={29}
         pcbY={3.5}
         pcbRotation={0}
