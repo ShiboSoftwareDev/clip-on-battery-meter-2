@@ -187,7 +187,7 @@ export default function ClipOnBatteryMeter() {
         name="RHYS1"
         resistance="3.3M"
         footprint="0402"
-        supplierPartNumbers={{ jlcpcb: ["C270613"] }}
+        supplierPartNumbers={{ jlcpcb: ["C470023"] }}
         pcbX={31}
         pcbY={6.5}
         pcbRotation={0}
@@ -198,7 +198,7 @@ export default function ClipOnBatteryMeter() {
         name="RHYS2"
         resistance="3.3M"
         footprint="0402"
-        supplierPartNumbers={{ jlcpcb: ["C270613"] }}
+        supplierPartNumbers={{ jlcpcb: ["C470023"] }}
         pcbX={35}
         pcbY={6}
         pcbRotation={0}
@@ -209,7 +209,7 @@ export default function ClipOnBatteryMeter() {
         name="RHYS3"
         resistance="3.3M"
         footprint="0402"
-        supplierPartNumbers={{ jlcpcb: ["C270613"] }}
+        supplierPartNumbers={{ jlcpcb: ["C470023"] }}
         pcbX={41}
         pcbY={6}
         pcbRotation={0}
@@ -220,7 +220,7 @@ export default function ClipOnBatteryMeter() {
         name="RHYS4"
         resistance="3.3M"
         footprint="0402"
-        supplierPartNumbers={{ jlcpcb: ["C270613"] }}
+        supplierPartNumbers={{ jlcpcb: ["C470023"] }}
         pcbX={47}
         pcbY={6}
         pcbRotation={0}
@@ -231,7 +231,7 @@ export default function ClipOnBatteryMeter() {
         name="RHYS5"
         resistance="3.3M"
         footprint="0402"
-        supplierPartNumbers={{ jlcpcb: ["C270613"] }}
+        supplierPartNumbers={{ jlcpcb: ["C470023"] }}
         pcbX={52}
         pcbY={6}
         pcbRotation={0}
